@@ -30,3 +30,44 @@ h1{font:600 clamp(27px,3.5vw,43px) 'Space Grotesk';letter-spacing:-1.8px;margin:
 footer{padding:20px 0 25px;color:#6f7f8f;font-size:9px;letter-spacing:1.3px}footer span{color:#b6f36a;margin:0 5px}
 @media(max-width:900px){.app-shell{padding:0 18px}.workspace{grid-template-columns:270px 1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.app-shell{padding:0 12px}.topbar{height:65px}.topbar-right{font-size:0}.icon-btn{display:block}.page-heading{display:block;padding:28px 0 20px}.data-pill{display:inline-flex;margin-top:17px}.stats-grid{gap:8px}.stat-card{padding:12px;gap:9px}.stat-icon{width:32px;height:32px}.stat-card strong{font-size:21px}.stat-card small{font-size:8px}.workspace{height:auto;display:flex;flex-direction:column}.sidebar{border-right:0;border-bottom:1px solid #263340;max-height:390px}.map-panel{height:470px;flex:none}.station-popup{right:8px;top:55px;min-width:170px}footer{font-size:8px}}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  border-top: 1px solid #293642;
+  color: #aab7c4;
+  font-size: 10px;
+}
+.pagination button {
+  border: 1px solid #344251;
+  background: #0c141d;
+  color: #dce5ed;
+  border-radius: 5px;
+  padding: 6px 9px;
+  display: flex;
+  cursor: pointer;
+}
+.pagination button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+.error-message {
+  color: #ff9b9b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.warning-text {
+  color: #ffd27a !important;
+}
+.station-popup {
+  max-width: 290px;
+  max-height: 75%;
+  overflow-y: auto;
+  line-height: 1.45;
+}
+.station-popup span {
+  overflow-wrap: anywhere;
+}
