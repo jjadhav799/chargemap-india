@@ -14,6 +14,12 @@ import './App.css';
 const API = 'https://ev-charging-stations-api.vercel.app/v1';
 const PAGE_SIZE = 100;
 
+const AMAZON_LOCATION_API_KEY = import.meta.env.VITE_AMAZON_LOCATION_API_KEY;
+
+const AMAZON_LOCATION_MAP_STYLE =
+  `https://maps.geo.ap-southeast-2.amazonaws.com/v2/styles/Standard/descriptor?key=${AMAZON_LOCATION_API_KEY}`;
+
+
 type Charger = {
   type_raw: string;
   standards: string[];
@@ -346,7 +352,7 @@ export default function App() {
 
           <Map
             initialViewState={{ longitude: 79, latitude: 22, zoom: 4.25 }}
-            mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
+            mapStyle={AMAZON_LOCATION_MAP_STYLE}
           >
             <NavigationControl position="bottom-right" />
             {stations.map((station) => (
