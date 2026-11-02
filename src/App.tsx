@@ -1,3 +1,7 @@
+import { setWorkerUrl } from 'maplibre-gl';
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+
+setWorkerUrl(maplibreWorkerUrl);
 import { useEffect, useMemo, useState } from 'react';
 import Map, { Marker, NavigationControl } from 'react-map-gl/maplibre';
 import {
